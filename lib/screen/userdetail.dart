@@ -11,9 +11,9 @@ class DetailPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        
+        backgroundColor: const Color.fromARGB(255, 149, 194, 165),
         appBar: AppBar(
-          leading: IconButton(icon: Icon(Icons.keyboard_backspace),color: Colors.white,onPressed: (){
+          leading: IconButton(icon: Icon(Icons.arrow_back_ios),color: Colors.white,onPressed: (){
             Navigator.pop(context);
           },),
           title: Text(name,style: TextStyle(color: Colors.white),),
@@ -29,6 +29,18 @@ class DetailPage extends StatelessWidget {
 }
 
 class UserBody extends StatefulWidget {
+  final String text='''I hope this email finds you well.
+I recently applied for the [Job Position] at [Bank Name] and ensured that I met all the listed qualifications and requirements. However, I have not received any notification regarding the written exam, while I understand that invitations have been sent out.
+
+I would appreciate it if you could clarify whether my application was reviewed and provide any feedback on my eligibility. I am highly interested in this opportunity and would be grateful for any insights you can share.
+
+Looking forward to your response.
+
+Best regards,
+[Your Full Name]
+[Your Contact Information]
+[Your Application Reference Number (if available)]''';
+
   final String perception;
   const UserBody({super.key, required this.perception});
 
@@ -39,33 +51,40 @@ class UserBody extends StatefulWidget {
 class _USerBodyState extends State<UserBody> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-  
-        height: 150,
-        width: 150,
-        decoration: BoxDecoration(
-          shape: BoxShape.rectangle,
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-        ),
-        child: Center(
-          child: Container(
-         // Set a fixed height
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.grey[200],
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.black),
+     final double hight=MediaQuery.of(context).size.height;
+     final double width =MediaQuery.of(context).size.width;
+
+
+    return  Padding(
+      padding: const EdgeInsets.only(top:10.0,left: 10),
+      child: SizedBox(
+         height: hight*0.6,
+         width: width*0.9,     
+      child: Card(
+        clipBehavior: Clip.hardEdge,
+         color: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        elevation: 4,
+      
+        child: Padding(
+          padding: EdgeInsets.all(6),
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: 5,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Text(widget.text),
+                
+                Row(
+                  spacing: width*0.05,
+                 children: [ Icon(Icons.favorite,color: Colors.red,),Icon(Icons.thumb_down),Icon(Icons.mood_bad)], 
+                )
+              ],
             ),
-            child: SingleChildScrollView(
-              child: Text(
-                widget.perception,
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
-          ),
+          ),)
       ),
-      )
+         
+      ),
     );
   }
 }
