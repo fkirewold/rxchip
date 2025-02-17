@@ -1,6 +1,6 @@
 
 import 'package:rxdart/rxdart.dart';
-import 'things.dart';
+import '../models/things.dart';
 
 class Bloc {
   final Sink<TypeOfThing?> setTypeOfThing;
