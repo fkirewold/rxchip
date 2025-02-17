@@ -1,5 +1,5 @@
 import 'things.dart';
-
+ export 'things.dart';
 class Provider{
 static final  things=[
     Thing(name:'Samuel',type:TypeOfThing.person),
