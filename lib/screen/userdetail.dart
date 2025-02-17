@@ -50,8 +50,7 @@ class _USerBodyState extends State<UserBody> {
         ),
         child: Center(
           child: Container(
-            width: 300, // Set a fixed width
-            height: 200, // Set a fixed height
+         // Set a fixed height
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.grey[200],
