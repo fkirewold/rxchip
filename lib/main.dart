@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rxfilterchip/models/thingprovider.dart';
 import 'package:rxfilterchip/models/things.dart';
 import 'package:rxfilterchip/screen/userdetail.dart';
-import '../models/bloc.dart';
+import '../bloc/bloc.dart';
 
 void main() {
   runApp(FilterChip());
