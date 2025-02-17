@@ -76,8 +76,10 @@ class _USerBodyState extends State<UserBody> {
                 Text(widget.text),
                 
                 Row(
-                  spacing: width*0.05,
-                 children: [ Icon(Icons.favorite,color: Colors.red,),Icon(Icons.thumb_down),Icon(Icons.mood_bad)], 
+                 spacing: width*0.05,
+                 children: [ Icon(Icons.favorite,color: Colors.red,),
+                 Icon(Icons.thumb_up,color: const Color.fromARGB(255, 234, 211, 7)
+                 ,),Icon(Icons.mood_bad)], 
                 )
               ],
             ),
