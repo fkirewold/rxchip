@@ -118,7 +118,7 @@ class _FilterChipState extends State<FilterChip> {
                         Navigator.push(
                                     context,
                                      MaterialPageRoute(
-                               builder: (context) => DetailPage(name:'Samrawit',perception:
+                               builder: (context) => DetailPage(name:things[index].name,perception:
                   '''Lorem ipsum dolor sit amet, 
                   consectetur adipiscing elit. Nullam auctor, justo ut 
                   suscipit fermentum, turpis ligula tincidunt nisi, id
