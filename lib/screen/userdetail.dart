@@ -9,7 +9,9 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        
         appBar: AppBar(
           leading: IconButton(icon: Icon(Icons.keyboard_backspace),color: Colors.white,onPressed: (){
             Navigator.pop(context);
