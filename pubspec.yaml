@@ -1,6 +1,6 @@
 name: rxfilterchip
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -19,8 +19,8 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/hotel.png"  # Path to your app icon
-  adaptive_icon_background: "#ffffff"  # Background color for adaptive icons (Android only)
+  image_path: "assets/images/hotel.png"
+  adaptive_icon_background: "#ffffff"  
 flutter:
   uses-material-design: true
 
